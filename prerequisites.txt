@@ -1,0 +1,93 @@
+############################################
+PatchDETR training prerequisits
+1) install Anaconda prompt: https://www.anaconda.com/download
+2) open Anaconda prompt
+3) create conda work environemnt (default base): conda env creat PatchDETR
+4) run: conda activate PatchDETR (if it hasn't already been activated)
+5) run: pip install python3-opencv torch jupyter
+6) install Visual Studio Code: https://code.visualstudio.com/download
+
+############################################
+how to setup Opencv for C++ Linux:
+sudo apt get update
+sudo apt install python3-Opencv libjsoncpp-dev
+
+############################################
+ensure you have libcamera installed:
+sudo apt install libcamera-dev libcamera-apps
+
+############################################
+in Visual Studio, move to folder intrudernet_inference
+cmake build .
+expected output:
+mircea@raspberrypi:~/Desktop/IntruderNet/intrudernet_inference $ cmake build .
+-- Found OpenCV version: 4.10.0
+-- Found Torch
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1")
+-- Checking for module 'libcamera'
+--   Found libcamera, version 0.6.0
+-- Found LibCamera
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mircea/Desktop/IntruderNet/intrudernet_inference
+if you see this, you are good to go
+
+############################################
+make sure you have the CPP extension installed into visual studio code
+
+############################################
+updates build command:
+Release:
+cmake -S . -B build
+Debug:
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+this should create the build folder and place there all the build related files
+and then 
+cmake --build build
+
+############################################
+how to generate libtorch for aarch64 (brace for 10 hour compilation)
+git clone --recursive https://github.com/pytorch/pytorch
+cd pytorch
+git checkout v2.5.1
+#pytorch commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+git submodule sync
+git submodule update --init --recursive
+
+export BUILD_SHARED_LIBS=ON
+export USE_NNPACK=OFF
+export USE_QNNPACK=ON
+export USE_PYTORCH_QNNPACK=ON
+export USE_XNNPACK=ON
+export BUILD_MOBILE_AUTOGRAD=OFF
+export BUILD_TEST=OFF
+export BUILD_BINARY=OFF
+export BUILD_PYTHON=OFF
+export USE_OPENMP=ON
+export USE_MKLDNN=OFF
+export USE_FBGEMM=OFF
+export USE_CUDA=OFF
+export USE_ROCM=OFF
+export USE_METAL=OFF
+
+# python setup.py develop <-- best not, too resource agrresive, leads to overheating & freeze, just move to next commands
+
+cmake -S . -B build \
+  -DBUILD_SHARED_LIBS=ON \
+  -DCMAKE_INSTALL_PREFIX=/opt/libtorch
+
+cmake --build build -j1
+cmake --install build
+
+#go to /opt
+cp -r libtorch /home/mircea/Desktop/IntruderNet/intrudernet_inference/thirdparty/
+
+############################################
+LabelImg setup:
+conda create -n labelimg_clean python=3.7.6 -y && conda activate labelimg_clean && python -m pip install labelImg==1.8.6 PyQt5==5.15.10 lxmlconda create -n labelimg_clean python=3.7.6 -y && conda activate labelimg_clean && python -m pip install labelImg==1.8.6 PyQt5==5.15.10 lxml
+
+python -c "p=r'%CONDA_PREFIX%\Lib\site-packages\libs\canvas.py'; s=open(p,encoding='utf-8').read(); s=s.replace('p.drawLine(self.prev_point.x(), 0, self.prev_point.x(), self.pixmap.height())','p.drawLine(int(self.prev_point.x()), 0, int(self.prev_point.x()), int(self.pixmap.height()))'); s=s.replace('p.drawLine(0, self.prev_point.y(), self.pixmap.width(), self.prev_point.y())','p.drawLine(0, int(self.prev_point.y()), int(self.pixmap.width()), int(self.prev_point.y()))'); open(p,'w',encoding='utf-8').write(s)"
+
+python -c "p=r'%CONDA_PREFIX%\Lib\site-packages\libs\canvas.py'; s=open(p,encoding='utf-8').read(); s=s.replace('p.drawRect(left_top.x(), left_top.y(), rect_width, rect_height)','p.drawRect(int(left_top.x()), int(left_top.y()), int(rect_width), int(rect_height))'); open(p,'w',encoding='utf-8').write(s)"
+
+labelImg

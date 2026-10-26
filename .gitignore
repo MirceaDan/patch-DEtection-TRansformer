@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+build/
+CMakeFiles
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+thirdparty/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch / model checkpoints
+#*.pt
+#*.pth
+*.ckpt
+*.weights
+
+# Dataset temporar / imagini brute
+dataset/
+#*.jpg
+*.jpeg
+*.png
+
+# VSCode / IDE
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Jupyter / notebooks checkpoints
+.ipynb_checkpoints/
+
+# MacOS / Linux system files
+.DS_Store
+*.swp
