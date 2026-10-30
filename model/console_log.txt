@@ -1,0 +1,58 @@
+[MEMORY] 100/583 images
+[MEMORY] 200/583 images
+[MEMORY] 300/583 images
+[MEMORY] 400/583 images
+[MEMORY] 500/583 images
+[MEMORY] pool=46811 tokens -> bank (2048, 256) from 583 images
+[SETUP] device=cpu amp=False trainable=6.18M train=680 val_clean=122 val_degraded=122 test_clean=304 test_degraded=304
+[EPOCH 1/50] 1445s loss=16.723 det=0.606/0.190/1.123 val_ap50 clean=0.000 degraded=0.000
+[EPOCH 2/50] 1347s loss=13.599 det=0.620/0.109/1.012 val_ap50 clean=0.009 degraded=0.002
+[EPOCH 3/50] 1396s loss=12.903 det=0.582/0.096/0.979 val_ap50 clean=0.000 degraded=0.000
+[EPOCH 4/50] 1408s loss=12.013 det=0.468/0.087/0.952 val_ap50 clean=0.006 degraded=0.003
+[EPOCH 5/50] 1329s loss=11.657 det=0.524/0.076/0.897 val_ap50 clean=0.005 degraded=0.006
+[EPOCH 6/50] 1317s loss=11.318 det=0.525/0.071/0.879 val_ap50 clean=0.002 degraded=0.002
+[EPOCH 7/50] 1667s loss=11.285 det=0.519/0.074/0.893 val_ap50 clean=0.021 degraded=0.019
+[EPOCH 8/50] 1750s loss=10.995 det=0.564/0.064/0.834 val_ap50 clean=0.003 degraded=0.004
+[EPOCH 9/50] 56703s loss=10.901 det=0.574/0.060/0.829 val_ap50 clean=0.013 degraded=0.015
+[EPOCH 10/50] 1419s loss=10.802 det=0.558/0.061/0.815 val_ap50 clean=0.007 degraded=0.008
+[EPOCH 11/50] 1500s loss=10.661 det=0.573/0.056/0.800 val_ap50 clean=0.025 degraded=0.026
+[EPOCH 12/50] 1520s loss=10.585 det=0.565/0.058/0.803 val_ap50 clean=0.014 degraded=0.015
+[EPOCH 13/50] 1442s loss=10.470 det=0.530/0.059/0.812 val_ap50 clean=0.007 degraded=0.006
+[EPOCH 14/50] 1493s loss=10.449 det=0.508/0.056/0.820 val_ap50 clean=0.017 degraded=0.015
+[EPOCH 15/50] 1366s loss=10.323 det=0.533/0.054/0.793 val_ap50 clean=0.028 degraded=0.038
+[EPOCH 16/50] 1385s loss=10.162 det=0.558/0.052/0.764 val_ap50 clean=0.031 degraded=0.030
+[EPOCH 17/50] 1391s loss=10.137 det=0.509/0.055/0.785 val_ap50 clean=0.011 degraded=0.015
+[EPOCH 18/50] 1265s loss=9.934 det=0.558/0.051/0.745 val_ap50 clean=0.014 degraded=0.015
+[EPOCH 19/50] 1435s loss=9.936 det=0.513/0.053/0.777 val_ap50 clean=0.020 degraded=0.025
+[EPOCH 20/50] 1442s loss=9.817 det=0.539/0.048/0.743 val_ap50 clean=0.053 degraded=0.051
+[EPOCH 21/50] 4917s loss=9.681 det=0.526/0.047/0.739 val_ap50 clean=0.039 degraded=0.035
+[EPOCH 22/50] 2012s loss=9.810 det=0.512/0.050/0.748 val_ap50 clean=0.032 degraded=0.035
+[EPOCH 23/50] 1449s loss=9.464 det=0.520/0.047/0.721 val_ap50 clean=0.028 degraded=0.029
+[EPOCH 24/50] 1354s loss=9.458 det=0.529/0.045/0.715 val_ap50 clean=0.015 degraded=0.014
+[EPOCH 25/50] 1338s loss=9.364 det=0.515/0.043/0.705 val_ap50 clean=0.019 degraded=0.021
+[EPOCH 26/50] 59405s loss=9.309 det=0.529/0.044/0.703 val_ap50 clean=0.031 degraded=0.030
+[EPOCH 27/50] 1731s loss=9.256 det=0.549/0.042/0.691 val_ap50 clean=0.037 degraded=0.040
+[EPOCH 28/50] 1488s loss=9.105 det=0.551/0.040/0.661 val_ap50 clean=0.027 degraded=0.025
+[EPOCH 29/50] 1514s loss=9.048 det=0.533/0.041/0.683 val_ap50 clean=0.030 degraded=0.032
+[EPOCH 30/50] 1740s loss=8.886 det=0.516/0.040/0.658 val_ap50 clean=0.048 degraded=0.053
+[EPOCH 31/50] 1512s loss=8.854 det=0.508/0.040/0.676 val_ap50 clean=0.035 degraded=0.034
+[EPOCH 32/50] 1295s loss=8.750 det=0.510/0.038/0.655 val_ap50 clean=0.037 degraded=0.049
+[EPOCH 33/50] 1593s loss=8.720 det=0.518/0.036/0.639 val_ap50 clean=0.049 degraded=0.041
+[EPOCH 34/50] 2324s loss=8.614 det=0.516/0.036/0.629 val_ap50 clean=0.062 degraded=0.067
+[EPOCH 35/50] 1370s loss=8.611 det=0.525/0.035/0.623 val_ap50 clean=0.047 degraded=0.050
+[EPOCH 36/50] 1499s loss=8.474 det=0.515/0.034/0.618 val_ap50 clean=0.057 degraded=0.053
+[EPOCH 37/50] 1310s loss=8.363 det=0.512/0.033/0.605 val_ap50 clean=0.051 degraded=0.059
+[EPOCH 38/50] 1361s loss=8.348 det=0.509/0.033/0.609 val_ap50 clean=0.061 degraded=0.063
+[EPOCH 39/50] 1735s loss=8.238 det=0.514/0.031/0.586 val_ap50 clean=0.062 degraded=0.072
+[EPOCH 40/50] 2143s loss=8.197 det=0.505/0.031/0.594 val_ap50 clean=0.057 degraded=0.059
+[EPOCH 41/50] 1263s loss=8.132 det=0.508/0.030/0.582 val_ap50 clean=0.080 degraded=0.080
+[EPOCH 42/50] 1275s loss=8.085 det=0.506/0.029/0.575 val_ap50 clean=0.063 degraded=0.067
+[EPOCH 43/50] 1357s loss=8.026 det=0.515/0.029/0.556 val_ap50 clean=0.090 degraded=0.085
+[EPOCH 44/50] 1798s loss=8.010 det=0.505/0.028/0.562 val_ap50 clean=0.085 degraded=0.087
+[EPOCH 45/50] 1533s loss=7.960 det=0.507/0.028/0.554 val_ap50 clean=0.098 degraded=0.097
+[EPOCH 46/50] 1661s loss=8.001 det=0.506/0.029/0.568 val_ap50 clean=0.093 degraded=0.093
+[EPOCH 47/50] 1326s loss=7.933 det=0.503/0.028/0.557 val_ap50 clean=0.096 degraded=0.094
+[EPOCH 48/50] 56296s loss=7.934 det=0.505/0.028/0.549 val_ap50 clean=0.095 degraded=0.095
+[EPOCH 49/50] 1299s loss=7.873 det=0.507/0.028/0.546 val_ap50 clean=0.095 degraded=0.094
+[EPOCH 50/50] 1853s loss=7.893 det=0.505/0.028/0.551 val_ap50 clean=0.094 degraded=0.095
+[TEST] {'test_clean_loss': 8.805375289760137, 'test_clean_ap50': 0.0005085600566530956, 'test_clean_recall50': 0.0037151702786377707, 'test_degraded_loss': 8.7242792633019, 'test_degraded_ap50': 0.0003373235864150351, 'test_degraded_recall50': 0.0030959752321981426, 'test_ap50_mean': 0.0004229418215340654}

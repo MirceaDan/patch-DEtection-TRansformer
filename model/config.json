@@ -1,0 +1,59 @@
+{
+  "data": {
+    "train_dir": "C:\\Projects\\patch-DEtection-TRansformer\\database\\train",
+    "test_dir": "C:\\Projects\\patch-DEtection-TRansformer\\database\\test",
+    "memory_dir": "C:\\Projects\\patch-DEtection-TRansformer\\memorybank",
+    "img_w": 1024,
+    "img_h": 576,
+    "val_fraction": 0.15,
+    "val_gap": 5,
+    "workers": 4,
+    "mud_prob": 0.7,
+    "use_motion": true,
+    "limit": null
+  },
+  "model": {
+    "pretrained": true,
+    "stride8": false,
+    "dim": 256,
+    "heads": 8,
+    "enc_layers": 2,
+    "dec_layers": 4,
+    "num_queries": 50,
+    "dropout": 0.1,
+    "tau": 0.1,
+    "memory_size": 2048,
+    "train_backbone": false,
+    "memory_refresh_every": 0
+  },
+  "loss": {
+    "w_cls": 1.0,
+    "w_l1": 5.0,
+    "w_giou": 2.0,
+    "w_heat": 1.0,
+    "eos_coef": 0.1,
+    "w_pcvt": 1.0,
+    "lam_semantic": 1.0,
+    "lam_memory": 0.5,
+    "lam_robust": 0.25,
+    "lam_gate": 0.25,
+    "gate_preserve": 0.25,
+    "semantic_detach_clean": false
+  },
+  "train": {
+    "epochs": 50,
+    "batch_size": 2,
+    "lr": 0.0001,
+    "backbone_lr_mult": 0.1,
+    "weight_decay": 0.0001,
+    "clip": 0.1,
+    "seed": 23,
+    "device": "auto",
+    "amp": true,
+    "output_dir": "C:\\Projects\\patch-DEtection-TRansformer\\model",
+    "selection_metric": "val_ap50_mean",
+    "rebuild_memory": false,
+    "resume": null,
+    "run_test": true
+  }
+}
